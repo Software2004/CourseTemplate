@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Bg Color-->
+    <color name="blacklight">#9A121212</color>
+    <color name="blacklight2">#67121212</color>
+    <color name="bg_light">#fff</color>
+    <color name="bg_dark">#111719</color>
+    <!--    Card Background-->
+    <color name="bg_light_alt">#eee</color>
+    <color name="bg_dark_alt">#393431</color>
+    <!--    Card Stroke Color-->
+    <color name="stroke_light">#aaa</color>
+    <color name="stroke_dark">#999</color>
+    <!--    Text And Icons-->
+    <color name="fg_light">#ccc</color>
+    <color name="fg_dark">#444</color>
+    <color name="fg_light_mode">@color/fg_dark</color>
+    <color name="fg_dark_mode">@color/fg_light</color>
+    <!--    Brand Colors-->
+    <color name="brand">#8f6a2e</color>
+    <color name="brand_alt">#8f6a2e</color>
+    <color name="brand_light">#8f6a2e</color>
+    <color name="brand_dark">#8f6a2e</color>
+    <color name="brand_transparent">#8f6a2e</color>
+    <!--    Primary Colors-->
+    <color name="primary_light_mode">@color/brand_dark</color>
+    <color name="primary_dark_mode">@color/brand_light</color>
+    <!--    Secondary Colors-->
+    <color name="secondary_light_mode">@color/brand</color>
+    <color name="secondary_dark_mode">@color/brand_alt</color>
+    <!--    Primary Colors-->
+    <color name="color_on_primary_light">#fff</color>
+    <color name="color_on_primary_dark">#fff</color>
+    <!--    Secondary Colors-->
+    <color name="color_on_secondary_light">@color/fg_light</color>
+    <color name="color_on_secondary_dark">@color/fg_light</color>
+    <color name="white">#fff</color>
+    <color name="white_with_dark_mode">#111</color>
+    <color name="textBodyColor">?android:textColor</color>
+</resources>

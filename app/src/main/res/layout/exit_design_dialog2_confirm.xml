@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?backgroundColor"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_marginTop="10dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:lottie_rawRes="@raw/warning"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warning"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"/>
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/tvDialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/note"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        />
+
+    <CheckBox
+        android:id="@+id/cbReason1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:text="I accept the Terms &amp; Conditions and Privacy Policy"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="I agree that I'll no longer be the member of this community!"
+        />
+
+    <!-- Options -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNoLearn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yes, Confirm"
+        android:layout_marginTop="15dp"
+        app:cornerRadius="8dp"
+        />
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/btnConfirmQuit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No, Cancel"
+        app:cornerRadius="8dp"
+        />
+
+</LinearLayout>
+

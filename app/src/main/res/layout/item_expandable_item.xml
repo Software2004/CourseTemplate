@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:divider="@drawable/divider_top" android:showDividers="middle|end"
+    android:orientation="vertical">
+    <LinearLayout android:id="@+id/btn"
+        android:animateLayoutChanges="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true" android:focusable="true" android:pointerIcon="hand"
+        android:paddingHorizontal="15dp" android:gravity="center_vertical"
+        android:background="@drawable/selectable_nav_item_bg"
+        android:paddingVertical="10dp">
+        <TextView android:id="@+id/title"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:padding="10dp"
+            android:textSize="20sp" android:textStyle="bold"
+            android:text="Title"/>
+        <ImageView android:id="@+id/icon"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="?colorOnBackground"
+            android:rotation="0"
+            android:src="@drawable/angle_right"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcv"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_expandable_subitem"/>
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="25dp"
+        android:paddingBottom="25dp"
+        android:orientation="vertical">
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher_foreground"
+        android:background="@drawable/ic_launcher_background"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"
+        tools:context=".MainActivity"/>
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" android:textStyle="bold"
+            android:text="Course Template" android:textSize="24sp"
+            android:layout_marginVertical="25dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et"
+            style="@style/editTextOutlined"
+            android:hint="username@example.com"
+            android:paddingVertical="15dp"
+            android:drawableLeft="@drawable/envelope"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_marginStart="15dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:background="?backgroundColor"
+                android:paddingHorizontal="5dp"
+                android:text="Email"
+                android:layout_marginBottom="-10.5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/et"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cornerRadius="5dp"
+            android:textAllCaps="true"
+            android:layout_marginVertical="5dp"
+            android:textColor="?backgroundColor"
+            android:backgroundTint="@color/white_with_dark_mode"
+            android:text="Continue with email"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/divider_top"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="10dp"
+                android:text=" OR WITH "/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:src="@drawable/divider_top"/>
+
+    </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/google"
+            android:text="Continue with Google"
+            android:textColor="?colorOnBackground"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:cornerRadius="10dp"
+            app:strokeColor="#aaa"
+            android:layout_marginTop="15dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/facebook"
+            android:text="Continue with Facebook"
+            android:layout_marginVertical="10dp"
+            android:textColor="?backgroundColor"
+            android:backgroundTint="#039be5"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:cornerRadius="10dp"
+            app:strokeColor="#039be5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/apple"
+            android:text="Continue with Apple"
+            android:textColor="?colorOnBackground"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:cornerRadius="10dp"
+            app:strokeColor="#aaa" />
+
+
+        <TextView android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="?colorPrimary"
+            android:text="Terms &amp; Condtions \u25CF Privacy Policy"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

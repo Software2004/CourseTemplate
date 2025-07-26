@@ -1,0 +1,38 @@
+<resources>
+    <style name="Base.Theme.CourseTemplate" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_light_mode</item> <item name="colorOnPrimary">@color/color_on_primary_light</item>
+        <item name="colorSecondary">@color/secondary_light_mode</item> <item name="colorOnSecondary">@color/color_on_secondary_light</item>
+        <item name="backgroundColor">@color/bg_light</item> <item name="colorOnBackground">@color/fg_light_mode</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+        <item name="cardBackgroundColor">@color/bg_light_alt</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">?colorOnPrimary</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="BaseTheme" parent="Base.Theme.CourseTemplate">
+        <item name="android:overScrollMode">never</item>
+    </style>
+    <style name="Theme.CourseTemplate" parent="BaseTheme">
+        <item name="cornerRadius">10dp</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:fontFamily">?fontFamily</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">?colorOnBackground</item>
+    </style>
+    <style name="SettingsButton" parent="Theme.CourseTemplate">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/selectable_nav_item_bg</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="backgroundTintMode">add</item>
+    </style>
+    <style name="FontTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">?fontFamily</item>
+        <item name="fontFamily">?fontFamily</item>
+    </style>
+    <style name="ProfileMenuTextAppearance" parent="FontTextAppearance">
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

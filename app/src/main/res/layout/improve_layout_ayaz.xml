@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/terms_layout_width"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    tools:parentTag="android.widget.RelativeLayout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="25dp"
+            android:gravity="center_vertical">
+            <ImageButton android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/angle_right"
+                android:rotation="180"
+                android:background="@drawable/selectable_nav_item_bg"
+                android:padding="20dp"
+                app:tint="?colorOnBackground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textStyle="bold"
+                android:text="Cancel Subscription" android:textSize="28sp"/>
+        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_top"/>
+            <TextView android:id="@+id/tv1"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="wrap_content" android:textStyle="bold"
+                android:text="Leave with dignity! " android:textSize="26sp"
+                />
+            <TextView android:id="@+id/tv2"
+                style="@style/txtBody16sp"
+                android:text="How can we compensate the issue you mentioned previously?"
+                android:layout_marginHorizontal="20dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                app:counterTextColor="@color/textBodyColor"
+                app:counterEnabled="true"
+                app:counterMaxLength="500">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:hint="Write at least 300 characters"
+                    android:textColorHint="@color/textBodyColor"
+                    android:padding="15dp"
+                    android:lines="8"
+                    android:gravity="top"
+                    android:textSize="15sp"
+                    android:inputType="textMultiLine"
+                    android:background="@drawable/outlined_8dp_round"
+                    android:backgroundTint="#11aaaaaa"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNextVideo2"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:textColor="?colorOnBackground"
+        android:insetLeft="20dp"
+        android:layout_marginVertical="5dp"
+        android:insetRight="20dp"
+        android:text="Stay Subscribed"
+        app:cornerRadius="8dp"
+        android:layout_above="@id/btnNextVideo"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNextVideo"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:insetLeft="20dp"
+        android:insetRight="20dp"
+        android:textAllCaps="true"
+        android:enabled="false"
+        android:layout_marginBottom="10dp"
+        android:text="Cancel Subscription"
+        app:cornerRadius="8dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</merge>

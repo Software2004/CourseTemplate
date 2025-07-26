@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CourseTemplate" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark_mode</item> <item name="colorOnPrimary">@color/color_on_primary_dark</item>
+        <item name="colorSecondary">@color/secondary_dark_mode</item> <item name="colorOnSecondary">@color/color_on_secondary_dark</item>
+        <item name="backgroundColor">@color/bg_dark</item> <item name="colorOnBackground">@color/fg_dark_mode</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="cardBackgroundColor">@color/bg_dark_alt</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

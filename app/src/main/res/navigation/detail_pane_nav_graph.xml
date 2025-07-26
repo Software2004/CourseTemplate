@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_pane_nav_graph.xml"
+    app:startDestination="@id/login2">
+
+    <activity
+        android:id="@+id/login2"
+        android:name="com.example.coursetemplate.Login2"
+        android:label="login2"
+        tools:layout="@layout/login2" />
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.example.coursetemplate.ProfileActivity"
+        android:label="layout_profile1"
+        tools:layout="@layout/layout_profile1" />
+</navigation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseViewActivity">
+    <include android:id="@+id/subitem_list" layout="@layout/course_view_list"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/subitem_viewer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+    <TextView android:id="@+id/visibilityHelper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/subitem_viewer"
+        app:layout_constraintEnd_toEndOf="@id/subitem_viewer"
+        app:layout_constraintTop_toTopOf="@id/subitem_viewer"
+        app:layout_constraintBottom_toBottomOf="@id/subitem_viewer"
+        android:text="Nothing Here to Preview"
+        android:gravity="center"/>
+    <include android:id="@+id/subitem_viewer" layout="@layout/course_view_preview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/subitem_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+
+        android:layout_height="match_parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!-- android:linvisible_weight="1"-->

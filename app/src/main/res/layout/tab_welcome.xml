@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="45sp"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginHorizontal="27dp"
+            android:text="Get Started"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="2"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="27dp"
+            android:text="Click to enroll any of them. Note: You can always enroll in other programs later. We encourage sticking to only 1 in the beginning."/>
+        <include layout="@layout/nav_list_item_alt"
+            android:id="@+id/tabWelcomeProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginHorizontal="27dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tabWelcomeItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="600dp"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_gravity="center"
+            android:paddingHorizontal="25dp"
+            android:paddingBottom="25dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/nav_list_item_alt"
+            android:orientation="vertical"
+            tools:itemCount="7"
+            app:spanCount="@integer/tab_welcome_column_count"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

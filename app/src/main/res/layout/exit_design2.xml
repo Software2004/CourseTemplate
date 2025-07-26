@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="0dp">
+
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/angle_small_left" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Exiting"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/icons8_about" />
+
+    </LinearLayout>
+
+    <!-- Course Details -->
+
+
+    <!-- Confirmation Message -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="50dp"
+            >
+
+            <TextView
+                android:id="@+id/tvConfirmationMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/feedback"
+                android:layout_marginTop="16dp"
+                android:text="You're about to quit this app!"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Impact Details -->
+            <TextView
+                android:id="@+id/tvImpactDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvConfirmationMessage"
+                android:layout_marginTop="8dp"
+                android:text="@string/quit_disadvantages"
+                android:textSize="16sp" />
+            <!-- Options -->
+            <LinearLayout
+                android:id="@+id/options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvImpactDetails"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNoLearn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:insetLeft="5dp"
+                    android:insetRight="5dp"
+                    android:text="No, Keep Learning"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/videoContainer"
+                    app:layout_constraintStart_toStartOf="@id/videoContainer"
+                    app:layout_constraintTop_toBottomOf="@id/text" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConfirmQuit"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:insetLeft="5dp"
+                    android:insetRight="5dp"
+                    android:text="Proceed to Quit"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/videoContainer"
+                    app:layout_constraintStart_toStartOf="@id/videoContainer"
+                    app:layout_constraintTop_toBottomOf="@id/text" />
+
+
+            </LinearLayout>
+
+            <!-- Support Information -->
+            <TextView
+                android:id="@+id/supportInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/options"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/need_help"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/supportInfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/outlined_full_round"
+                    android:padding="10dp"
+                    android:src="@drawable/phone_call_1_" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/outlined_full_round"
+                    android:padding="10dp"
+                    android:src="@drawable/envelope" />
+
+
+            </LinearLayout>
+
+
+            <!-- Feedback Request -->
+            <LinearLayout
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/feedback"
+                    android:layout_marginTop="5dp"
+                    android:text="Why you're quitting?"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvFeedbackRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Please tell us why you are quitting (optional):"
+                    android:textSize="14sp" />
+
+                <!-- Checkbox Options -->
+                <CheckBox
+                    android:id="@+id/cbReason1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Content is too difficult" />
+
+                <CheckBox
+                    android:id="@+id/cbReason2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lack of time to study" />
+
+                <CheckBox
+                    android:id="@+id/cbReason3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course is not interesting" />
+
+                <CheckBox
+                    android:id="@+id/cbReason4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Found a better course" />
+
+                <CheckBox
+                    android:id="@+id/cbReason5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technical issues" />
+
+                <CheckBox
+                    android:id="@+id/cbReasonOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other (please specify below)" />
+
+                <EditText
+                    android:id="@+id/etFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/outlined_10dp_round"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Your feedback"
+                    android:inputType="textMultiLine"
+                    android:minHeight="100dp"
+                    android:padding="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSkipFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:enabled="false"
+                    android:text="Submit Feedback"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+
+            <!-- Footer -->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvPrivacyPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="5dp"
+        android:clickable="true"
+        android:text="Privacy Policy \u25CF Terms of Service"
+        android:textColor="?attr/colorPrimary" />
+
+</RelativeLayout>

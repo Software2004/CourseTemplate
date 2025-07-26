@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BaseTheme" parent="Base.Theme.CourseTemplate">
+        <item name="android:overScrollMode">always</item>
+    </style>
+</resources>

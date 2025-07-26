@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:parentTag="android.widget.FrameLayout">
+    <LinearLayout android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/outlined_10dp_round"
+        android:backgroundTint="#11aaaaaa"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botLay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="25dp"
+            android:gravity="center_vertical">
+            <ImageButton android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/angle_right"
+                android:rotation="180"
+                android:background="@drawable/selectable_nav_item_bg"
+                android:padding="20dp"
+                app:tint="?colorOnBackground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textStyle="bold"
+                android:text="Cancel Subscription" android:textSize="28sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_top"/>
+        <TextView android:id="@+id/tv1"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content" android:textStyle="bold"
+            android:text="Your request have been submitted successfully!" android:textSize="24sp"
+            />
+        <TextView android:id="@+id/tv2"
+            style="@style/txtBody16sp"
+            android:text="We will review your application and respond you as soon as possible. Please wait with patience. We'll contact back soon."
+            android:layout_marginHorizontal="20dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNextVideo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:insetLeft="20dp"
+            android:insetRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Close App"
+            app:cornerRadius="8dp"
+            />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:background="@drawable/outlined_10dp_round"
+        android:backgroundTint="#11aaaaaa"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botLay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="25dp"
+            android:gravity="center_vertical">
+            <ImageButton android:id="@+id/btnBack2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/angle_right"
+                android:rotation="180"
+                android:background="@drawable/selectable_nav_item_bg"
+                android:padding="20dp"
+                app:tint="?colorOnBackground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textStyle="bold"
+                android:text="Cancel Subscription" android:textSize="28sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_top"/>
+        <TextView android:id="@+id/tv1"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content" android:textStyle="bold"
+            android:text="Warning!" android:textSize="24sp"
+            />
+        <TextView android:id="@+id/tv2"
+            style="@style/txtBody16sp"
+            android:text="You will no longer recover your data ofter 3 months from your subscription cancellation. Our servers will automatically delete all of your data after 3 months. you can come back at anytime withing 3 months to recover your progress."
+            android:layout_marginHorizontal="20dp"/>
+        <LinearLayout android:id="@+id/botLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/card"
+            app:layout_constraintStart_toStartOf="@id/card">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStay"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:textColor="?colorOnBackground"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="58dp"
+                android:insetLeft="5dp"
+                android:insetRight="5dp"
+                android:text="Stay Subscribed"
+                app:cornerRadius="8dp"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNextVideo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="58dp"
+                android:insetLeft="5dp"
+                android:insetRight="5dp"
+                android:text="I Agree"
+                app:cornerRadius="8dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:background="@drawable/outlined_10dp_round"
+        android:backgroundTint="#11aaaaaa"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botLay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="25dp"
+            android:gravity="center_vertical">
+            <ImageButton android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/angle_right"
+                android:rotation="180"
+                android:background="@drawable/selectable_nav_item_bg"
+                android:padding="20dp"
+                app:tint="?colorOnBackground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textStyle="bold"
+                android:text="Cancel Subscription" android:textSize="28sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_top"/>
+        <TextView android:id="@+id/tv1"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content" android:textStyle="bold"
+            android:text="Confirmation Email" android:textSize="24sp"
+            />
+        <TextView android:id="@+id/tv2"
+            style="@style/txtBody16sp"
+            android:text="We have sent a confirmation email to given address. Open the link in the sent email. You many not be able to recover you progress once you open the link."
+            android:layout_marginHorizontal="20dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNextVideo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:insetLeft="20dp"
+            android:insetRight="20dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="15dp"
+            android:text="Okay, I Understood"
+            app:cornerRadius="8dp"
+            />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:background="@drawable/outlined_10dp_round"
+        android:backgroundTint="#11aaaaaa"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botLay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="25dp"
+            android:gravity="center_vertical">
+            <ImageButton android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/angle_right"
+                android:rotation="180"
+                android:background="@drawable/selectable_nav_item_bg"
+                android:padding="20dp"
+                app:tint="?colorOnBackground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textStyle="bold"
+                android:text="Cancel Subscription" android:textSize="28sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_top"/>
+        <TextView android:id="@+id/tv1"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content" android:textStyle="bold"
+            android:text="Password" android:textSize="24sp"
+            />
+        <TextView android:id="@+id/tv2"
+            style="@style/txtBody16sp"
+            android:text="Please confirm your password below to verify it's actually you!"
+            android:layout_marginHorizontal="20dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="5dp"
+            android:hint="Your Password"
+            android:textColorHint="@color/textBodyColor"
+            android:padding="15dp"
+            android:textSize="14sp"
+            android:background="@drawable/outlined_8dp_round"
+            android:backgroundTint="#11aaaaaa"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:id="@+id/btnNextVideo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:textColor="?colorOnBackground"
+            android:insetLeft="20dp"
+            android:layout_marginVertical="5dp"
+            android:insetRight="20dp"
+            android:text="Stay Subscribed"
+            app:cornerRadius="8dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNextVideo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:insetLeft="20dp"
+            android:insetRight="20dp"
+            android:textAllCaps="true"
+            android:enabled="false"
+            android:layout_marginBottom="10dp"
+            android:text="Cancel Subscription"
+            app:cornerRadius="8dp"
+            />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/card"
+        android:layout_width="@dimen/terms_layout_width"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/outlined_10dp_round"
+        android:backgroundTint="#11aaaaaa"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botLay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="25dp"
+            android:gravity="center_vertical">
+            <ImageButton android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/angle_right"
+                android:rotation="180"
+                android:background="@drawable/selectable_nav_item_bg"
+                android:padding="20dp"
+                app:tint="?colorOnBackground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textStyle="bold"
+                android:text="Cancel Subscription" android:textSize="28sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_top"/>
+        <TextView android:id="@+id/tv1"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content" android:textStyle="bold"
+            android:text="Email Confirmation" android:textSize="24sp"
+            />
+        <TextView android:id="@+id/tv2"
+            style="@style/txtBody16sp"
+            android:text="Please confirm your email below to verify it's actually you!"
+            android:layout_marginHorizontal="20dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="5dp"
+            android:hint="email*****98@***.com"
+            android:textColorHint="@color/textBodyColor"
+            android:padding="15dp"
+            android:textSize="14sp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/outlined_8dp_round"
+            android:backgroundTint="#11aaaaaa"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:id="@+id/btnNextVideo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:textColor="?colorOnBackground"
+            android:insetLeft="20dp"
+            android:layout_marginVertical="5dp"
+            android:insetRight="20dp"
+            android:text="Stay Subscribed"
+            app:cornerRadius="8dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNextVideo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:insetLeft="20dp"
+            android:insetRight="20dp"
+            android:textAllCaps="true"
+            android:enabled="false"
+            android:layout_marginBottom="10dp"
+            android:text="Cancel Subscription"
+            app:cornerRadius="8dp"
+            />
+    </LinearLayout>
+
+
+</merge>

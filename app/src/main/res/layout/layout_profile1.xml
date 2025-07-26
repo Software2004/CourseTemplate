@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:divider="@drawable/divider_top"
+    android:showDividers="middle"
+    tools:context=".ProfileActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingTop="25dp"
+        android:gravity="center_vertical">
+        <ImageButton android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/angle_right"
+            android:rotation="180"
+            android:background="@drawable/selectable_nav_item_bg"
+            android:padding="20dp"
+            app:tint="?colorOnBackground"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textStyle="bold"
+            android:text="Settings" android:textSize="35sp"/>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="50dp"
+            android:showDividers="middle" android:divider="@drawable/divider_top">
+
+            <com.example.coursetemplate.CustomClasses.ButtonMaterial
+                style="@style/SettingsButton"
+                app:icon="@drawable/angle_small_right_1_"
+                app:title="Manage Profile"
+                app:subtitle="Change Profile Settings"/>
+
+            <com.example.coursetemplate.CustomClasses.ButtonMaterial
+                style="@style/SettingsButton"
+                app:icon="@drawable/angle_small_right_1_"
+                app:title="Chat Settings"
+                app:subtitle="Adjust your chat preferences"/>
+            <com.example.coursetemplate.CustomClasses.ButtonMaterial
+                style="@style/SettingsButton"
+                app:icon="@drawable/angle_small_right_1_"
+                app:title="Security Settings"
+                app:subtitle="Manage privacy and security"/>
+
+            <com.example.coursetemplate.CustomClasses.ButtonMaterial
+                android:id="@+id/subscription"
+                style="@style/SettingsButton"
+                app:icon="@drawable/angle_small_right_1_"
+                app:title="Manage Subscription"
+                app:subtitle="Change your subscription plans"/>
+            <com.example.coursetemplate.CustomClasses.ButtonMaterial
+                style="@style/SettingsButton"
+                app:icon="@drawable/angle_small_right_1_"
+                app:title="App Settings"
+                app:subtitle="Advanced settings, about app, update app"/>
+            <com.example.coursetemplate.CustomClasses.ButtonMaterial
+                style="@style/SettingsButton"
+                app:icon="@drawable/angle_small_right_1_"
+                app:title="Privacy Policy"
+                app:subtitle="Change your privacy settings"/>
+            <com.example.coursetemplate.CustomClasses.ButtonMaterial
+                style="@style/SettingsButton"
+                app:icon="@drawable/angle_small_right_1_"
+                app:title="Terms and Conditions"
+                app:subtitle="Explore our terms and conditions"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+
+    <!--
+
+                <com.example.coursetemplate.libs.ButtonMaterial style="@style/SettingsButton"
+                    app:icon="@drawable/close" app:title="Manage Profile" app:subtitle="Display Name, Badges, Boosters"/>
+                <com.example.coursetemplate.libs.ButtonMaterial style="@style/SettingsButton"
+                    app:icon="@drawable/close" app:title="Chat Settings" app:subtitle="Chat Theme, Download Options, Backup"/>
+                <com.example.coursetemplate.libs.ButtonMaterial style="@style/SettingsButton"
+                    app:icon="@drawable/close" app:title="Privacy &amp; Security" app:subtitle="Change Password, 2-Factor Authentication"/>
+                <com.example.coursetemplate.libs.ButtonMaterial style="@style/SettingsButton"
+                    app:icon="@drawable/close" app:title="Manage Subscription" app:subtitle="Change or cancel your subscription"/>
+                <com.example.coursetemplate.libs.ButtonMaterial style="@style/SettingsButton"
+                    app:icon="@drawable/close" app:title="App Settings" app:subtitle="Themes, Accent, Navigation Style, etc"/>
+                <com.example.coursetemplate.libs.ButtonMaterial style="@style/SettingsButton"
+                    app:icon="@drawable/close" app:title="Privacy Policy" app:subtitle="Type of data we collect from you"/>
+                <com.example.coursetemplate.libs.ButtonMaterial style="@style/SettingsButton"
+                    app:icon="@drawable/close" app:title="Terms &amp; Conditions" app:subtitle="Conditions you agreed while using this app"/>
+                    -->

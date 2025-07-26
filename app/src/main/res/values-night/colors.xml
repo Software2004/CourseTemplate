@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_with_dark_mode">#fff</color>
+    <color name="textBodyColor">#969a9d</color>
+</resources>

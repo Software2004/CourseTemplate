@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginHorizontal="35dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:textSize="30sp"
+        android:text="Business Mastery"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:animateLayoutChanges="false"
+        android:layout_gravity="center_horizontal"
+        app:cardBackgroundColor="?android:windowBackground"
+        app:contentPaddingTop="5dp" app:contentPaddingBottom="5dp"
+        app:contentPaddingLeft="6dp" app:contentPaddingRight="6dp"
+        android:layout_marginVertical="15dp">
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:animateLayoutChanges="false"
+            app:tabTextAppearance="@style/FontTextAppearance"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorFullWidth="true"
+            app:tabGravity="center"
+            app:tabInlineLabel="true"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIconTint="@color/tab_icon_tint"
+            app:tabIndicator="@drawable/card"
+            app:tabSelectedTextColor="?colorOnPrimary"
+            android:background="@android:color/transparent">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/play"
+                android:text="Courses"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/saved"
+                android:text="Saved"/>
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="@integer/courses_list_column_count"
+        tools:listitem="@layout/item_course" />
+</LinearLayout>

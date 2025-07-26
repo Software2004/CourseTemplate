@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="HardcodedText"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:typeface="monospace"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="15sp"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:background="?colorPrimary"
+        android:textColor="#fff"
+        android:text="@string/test_string"/>
+</LinearLayout>

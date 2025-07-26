@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".HomeActivity">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail"
+        android:id="@+id/profil"/>
+
+    <LinearLayout android:id="@+id/navBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/divider_top"
+        android:minHeight="100dp" android:showDividers="middle"
+        android:divider="@drawable/divider_top"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nav_items"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" android:layout_weight="1"
+            tools:listitem="@layout/nav_list_item"
+            tools:itemCount="10"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        <include layout="@layout/nav_list_item" android:id="@+id/nav_profile" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/tab_welcome" android:id="@+id/tabWelcome"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/tab_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/tab_category"/>
+    </FrameLayout>
+</LinearLayout>

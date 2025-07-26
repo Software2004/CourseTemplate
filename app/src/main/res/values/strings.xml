@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Course Template</string>
+    <string name="test_string">
+        Some Important
+        \n<small><small>Some Important</small></small>
+    </string>
+    <string name="privacy"><u>Terms &amp; Conditions</u> \u25CF <u>Privacy Policy</u></string>
+    <string name="courses_template">Course Template</string>
+    <string name="learn">
+         &#160;\u25CF The Way of Business\n
+        \u25CF The Business Lead Generation\n
+        \u25CF High ticket Closing\n
+        \u25CF Do and Don\'ts of Business\n
+        \u25CF The Act of Keep going\n
+        \u25CF Facts and Myths\n
+        \u25CF The business principles of top 10\n
+    </string>
+    <string name="quit_disadvantages">\u25CF All progress will be lost.\n\u25CF You will lose access to all course materials.
+        \n\u25CF No refund will be provided.\n\u25CF No certificates will be provided.</string>
+    <string name="quit_disadvantages2">\u25A1 All progress will be lost.\n\u25A1 You will lose access to all course materials.
+        \n\u25A1 No refund will be provided.\n\u25A1 No certificates will be provided.</string>
+    <string name="need_help"><u>Need help?</u></string>
+    <string name="note">NOTE: Cancelling subscription will result in losing your progress and access to the course materials after x months.</string>
+    <string name="manage_profile">Manage Profile\n<small><small><small>Change Profile Setting</small></small></small></string>
+</resources>
